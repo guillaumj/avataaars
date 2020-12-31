@@ -3,9 +3,9 @@ var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
             ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+            function (d, b) { for (var p in b) if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p]; };
         return extendStatics(d, b);
-    }
+    };
     return function (d, b) {
         extendStatics(d, b);
         function __() { this.constructor = d; }
@@ -13,8 +13,9 @@ var __extends = (this && this.__extends) || (function () {
     };
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.Bear = exports.Resist = exports.Pizza = exports.Selena = exports.Hola = exports.Diamond = exports.Deer = exports.Cumbia = exports.Bat = exports.SkullOutline = exports.Skull = void 0;
 var React = require("react");
-var lodash_1 = require("lodash");
+var uniqueId = require("lodash.uniqueid");
 var options_1 = require("../../options");
 var Skull = /** @class */ (function (_super) {
     __extends(Skull, _super);
@@ -191,8 +192,8 @@ var Bear = /** @class */ (function (_super) {
     __extends(Bear, _super);
     function Bear() {
         var _this = _super !== null && _super.apply(this, arguments) || this;
-        _this.mask1 = lodash_1.uniqueId('react-mask-');
-        _this.path1 = lodash_1.uniqueId('react-path-');
+        _this.mask1 = uniqueId('react-mask-');
+        _this.path1 = uniqueId('react-path-');
         return _this;
     }
     Bear.prototype.render = function () {
